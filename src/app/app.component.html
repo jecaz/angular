@@ -1,3 +1,6 @@
 <h1>
   {{title}}
 </h1>
+<div *ngFor = "let postObj of posts">
+  <post [post]="postObj"></post>
+</div>
