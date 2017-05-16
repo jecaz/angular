@@ -1,13 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {Post} from '../model/post.model';
+import {Post} from '../../../model/post.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'post-list',
+  templateUrl: './post-list.component.html',
+  styleUrls: ['./post-list.component.css']
 })
-export class AppComponent implements OnInit {
-  pageTitle = 'Posts:';
+export class PostListComponent implements OnInit{
+
+  private pageTitle = 'Posts';
 
   private posts: Post[];
 
@@ -38,11 +39,11 @@ export class AppComponent implements OnInit {
 
     console.log(this.posts);
     /*const post1 = {id: 1, name: 'Best song ever', comment: 'Great song!'};
-    const post2 = {id: 2, name: 'Practice yoga', comment: 'Cool activity!'};
-    const post3 = {id: 3, name: 'Do dream job', comment: 'Yes, that\'s awesome!'};
+     const post2 = {id: 2, name: 'Practice yoga', comment: 'Cool activity!'};
+     const post3 = {id: 3, name: 'Do dream job', comment: 'Yes, that\'s awesome!'};
 
-    this.posts.push(new Post(post1));
-    this.posts.push(new Post(post2));
-    this.posts.push(new Post(post3));*/
+     this.posts.push(new Post(post1));
+     this.posts.push(new Post(post2));
+     this.posts.push(new Post(post3));*/
   }
 }

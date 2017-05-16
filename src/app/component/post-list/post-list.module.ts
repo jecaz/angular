@@ -3,20 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import {PostListModule} from './component/post-list/post-list.module';
+import {PostListComponent} from "./post-list.component";
+import {PostModule} from "./post/post.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    PostListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    PostListModule
+    PostModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  exports: [PostListComponent]
 })
-export class AppModule { }
+export class PostListModule { }

@@ -1,0 +1,12 @@
+<div class="post-container">
+  <div class="post-container__image">
+    <img class="post-image" [src]="image">
+  </div>
+  <div class="post-content">
+    <a class="post-title" href="#">{{indexNumberOfPost}}. {{post.title}}</a>
+    <a class="post-comments" href="#">
+      <span class="post-numberOfComments">{{post.numberOfComments}}</span>
+      <span class="post-comment">{{post.numberOfComments === 1 ? 'comment' : 'comments'}}</span>
+    </a>
+  </div>
+</div>

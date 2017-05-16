@@ -5,10 +5,15 @@
 }
 
 .post-title {
-  display: block;
-  padding-top: 5px;
-  padding-left: 10px;
+  display: inline-block;
   text-decoration: none;
+}
+
+.post-content {
+  display: inline-block;
+  position: relative;
+  top: -45px;
+  padding-left: 10px;
 }
 
 .post-comment {
@@ -36,4 +41,13 @@
 
 .post-comments:hover {
   color: gray;
+}
+
+.post-container__image {
+  display: inline-block;
+}
+
+.post-image {
+  width: 100px;
+  height: 100px;
 }
