@@ -46,11 +46,11 @@ export class Post {
     this._imageOfPost = value;
   }
 
-  get comment(): Comment[] {
+  get postComment(): Comment[] {
     return this._postComment;
   }
 
-  set comment(value: Comment[]) {
+  set postComment(value: Comment[]) {
     this._postComment = value;
   }
 }
