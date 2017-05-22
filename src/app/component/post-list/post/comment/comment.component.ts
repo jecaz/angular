@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PostService} from "../../../../../service/post.service";
 
 @Component({
   selector: 'comment',
@@ -9,7 +8,7 @@ import {PostService} from "../../../../../service/post.service";
 export class CommentComponent implements OnInit{
 
   @Input()
-  private comment: Comment;
+  private comment: Comment[];
 
   constructor() {}
 

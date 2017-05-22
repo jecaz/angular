@@ -4,7 +4,7 @@
   </div>
   <div class="post-content">
     <a class="post-title">{{indexNumberOfPost}}. {{post.title}}</a>
-    <a class="post-comments" [routerLink]="['comment-list', post.id]">
+    <a class="post-comments" [routerLink]="['post', post.id]">
       <span class="post-numberOfComments">{{post.numberOfComments}}</span>
       <span class="post-comment">{{post.numberOfComments === 1 ? 'comment' : 'comments'}}</span>
     </a>
