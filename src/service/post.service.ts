@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {Post} from '../model/post.model';
+import { Injectable } from '@angular/core';
+import { Post } from '../model/post.model';
 
 const POSTS: Post[] = [
   new Post({
@@ -20,7 +20,8 @@ const POSTS: Post[] = [
         comment: 'This fills me with joy!',
         numberOfPoints: 40
       }
-    ]
+    ],
+    postCategory: 'news'
   }),
   new Post({
     id: 2,
@@ -46,7 +47,8 @@ const POSTS: Post[] = [
         comment: 'Dark humor is like food, not everyone gets it.',
         numberOfPoints: 50
       }
-    ]
+    ],
+    postCategory: 'news'
   }),
   new Post({
     id: 3,
@@ -72,7 +74,8 @@ const POSTS: Post[] = [
         comment: 'So it\'s a physics thing? I thought there were muscles pulling it back in!',
         numberOfPoints: 557
       }
-    ]
+    ],
+    postCategory: 'interesting'
   })
 ];
 
@@ -86,7 +89,12 @@ export class PostService {
   getPost(id: number) {
     return POSTS.find((post) => post.id === id);
   }
+
+  public filterPost(searchPost: string): Post[] {
+    return POSTS.filter((post) => post.postCategory.toLowerCase().indexOf(searchPost.toLowerCase()) !== -1);
+  }
 }
+
 
 
 

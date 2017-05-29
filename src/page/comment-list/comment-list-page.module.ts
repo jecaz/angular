@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {CommentListComponent} from './comment-list.component';
-import {CommentModule} from '../comment.module';
+import { CommentListPageComponent } from './comment-list-page.component';
+import { CommentModule } from '../../app/component/comment/comment.module';
 
 
 @NgModule({
   declarations: [
-    CommentListComponent
+    CommentListPageComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +17,6 @@ import {CommentModule} from '../comment.module';
     CommentModule
   ],
   providers: [],
-  exports: [CommentListComponent]
+  exports: [CommentListPageComponent]
 })
-export class CommentListModule { }
+export class CommentListPageModule { }

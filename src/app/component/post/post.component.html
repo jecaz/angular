@@ -1,0 +1,15 @@
+<div class="post-container">
+  <div class="post-container__image">
+    <img class="post-image" [src]="post.imageOfPost">
+  </div>
+  <div class="post-content">
+    <a class="post-title">{{indexNumberOfPost}}. {{post.title}}</a>
+    <a class="post-comments" [routerLink]="['post', post.id]">
+      <span class="post-numberOfComments">{{post.postComment.length}}</span>
+      <span class="post-comment">
+        {{(post.postComment.length === 1 || post.postComment.length === 0) ? 'comment' : 'comments'}}
+      </span>
+    </a>
+    <div class="post-category">Category: {{post.postCategory}}</div>
+  </div>
+</div>

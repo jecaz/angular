@@ -1,6 +1,0 @@
-<h1>
-  {{pageTitle}}:
-</h1>
-<div *ngFor = "let postObj of posts; let i = index">
-  <post [post]="postObj" [indexNumberOfPost]="i+1" [image]="postObj.imageOfPost"></post>
-</div>

@@ -3,11 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-
 import { AppComponent } from './app.component';
-import {PostListModule} from './component/post-list/post-list.module';
-import {routing} from './app.routes';
-import {PostService} from "../service/post.service";
+import { PostListPageModule } from '../page/post-list/post-list-page.module';
+import { routing } from './app.routes';
+import { PostService } from '../service/post.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import {PostService} from "../service/post.service";
     BrowserModule,
     FormsModule,
     HttpModule,
-    PostListModule,
+    PostListPageModule,
     routing
   ],
   providers: [PostService],

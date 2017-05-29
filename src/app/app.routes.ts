@@ -1,10 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
-import {PostListComponent} from './component/post-list/post-list.component';
-import {CommentListComponent} from './component/post-list/post/comment/comment-list/comment-list.component';
+import { PostListPageComponent } from '../page/post-list/post-list-page.component';
+import { CommentListPageComponent } from '../page/comment-list/comment-list-page.component';
 
 export const routes: Routes = [
-  { path: '', component: PostListComponent },
-  { path: 'post/:id', component: CommentListComponent}
+  { path: '', component: PostListPageComponent },
+  { path: 'post/:id', component: CommentListPageComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes);

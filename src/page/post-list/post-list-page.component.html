@@ -1,0 +1,14 @@
+<h1>
+  {{pageTitle}}:
+</h1>
+<form>
+  <input type="text"
+         name="postName"
+         placeholder="search for post category"
+         [style.margin.px]="10"
+         [(ngModel)]="name"
+         (input)="filterItem(name)"/>
+</form>
+<div *ngFor = "let postObj of filteredPosts; let i = index">
+  <app-post [post]="postObj" [indexNumberOfPost]="i+1"></app-post>
+</div>

@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import {PostListComponent} from "./post-list.component";
-import {PostModule} from "./post/post.module";
+import { PostListPageComponent } from './post-list-page.component';
+import { PostModule } from '../../app/component/post/post.module';
 
 @NgModule({
   declarations: [
-    PostListComponent
+    PostListPageComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +17,6 @@ import {PostModule} from "./post/post.module";
     PostModule
   ],
   providers: [],
-  exports: [PostListComponent]
+  exports: [PostListPageComponent]
 })
-export class PostListModule { }
+export class PostListPageModule { }

@@ -5,6 +5,7 @@ export class Post {
   private _numberOfComments: number;
   private _imageOfPost: string;
   private _postComment: Comment[];
+  private _postCategory: string;
 
   constructor(obj?: any) {
     this._id = obj && obj.id;
@@ -12,6 +13,7 @@ export class Post {
     this._numberOfComments = obj && obj.numberOfComments;
     this._imageOfPost = obj && obj.imageOfPost;
     this._postComment = obj && obj.postComment;
+    this._postCategory = obj && obj.postCategory;
   }
 
   get id(): number {
@@ -52,5 +54,13 @@ export class Post {
 
   set postComment(value: Comment[]) {
     this._postComment = value;
+  }
+
+  get postCategory(): string {
+    return this._postCategory;
+  }
+
+  set postCategory(value: string) {
+    this._postCategory = value;
   }
 }
